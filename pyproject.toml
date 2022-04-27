@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "dctorch"
+version = "0.1.0"
+description = "fast discrete cosine transforms for pytorch"
+authors = ["jack <jack@gallabytes.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+numpy = "^1.22.3"
+scipy = "^1.8.0"
+torch = "^1.11.0"
+
+[tool.poetry.dev-dependencies]
+black = "^22.3.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
