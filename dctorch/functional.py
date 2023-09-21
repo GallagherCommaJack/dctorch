@@ -18,12 +18,12 @@ def compute_idct_mat(n: int, device: str, dtype: torch.dtype) -> torch.Tensor:
 
 def dct(t: torch.Tensor) -> torch.Tensor:
     m = compute_dct_mat(t.shape[-2], device=t.device, dtype=t.dtype)
-    return torch.einsum("...id,ij->jd", t, m)
+    return torch.einsum("...id,ij->...jd", t, m)
 
 
 def idct(t: torch.Tensor) -> torch.Tensor:
     m = compute_idct_mat(t.shape[-2], device=t.device, dtype=t.dtype)
-    return torch.einsum("...id,ij->jd", t, m)
+    return torch.einsum("...id,ij->...jd", t, m)
 
 
 def dct2(t: torch.Tensor) -> torch.Tensor:

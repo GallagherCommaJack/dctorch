@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "dctorch"
-version = "0.1.1"
+version = "0.1.2"
 description = "fast discrete cosine transforms for pytorch"
 authors = ["jack <jack@gallabytes.com>"]
 license = "MIT"
